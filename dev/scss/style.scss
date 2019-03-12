@@ -1,0 +1,204 @@
+@import 'vars';
+body, html{
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+p{
+  font-family: $font_montseratt;
+  color: $text_black;
+  font-size: 19.8px;
+  font-weight: 300;
+  line-height: 33px;
+}
+#join-us{
+
+  text-align: center;
+  h1{
+    font-family: Montserrat;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $theme_dark_blue;
+    margin-top: 12%;
+  }
+  #arm-photo{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: -2;
+    max-width: 100%;
+    height: auto;
+  }
+  #car-photo{
+    position: absolute;
+    bottom: 25%;
+    left:0;
+    z-index: -1;
+    max-width: 100%;
+    height: auto;
+  }
+  button{
+    border: none;
+    background-color: $theme_pink_2;
+    font-family: $font_montseratt;
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+    padding: 24px 78px 24px 78px;
+    &:hover{
+      background-color: darken($theme_pink_2, 15);
+      transition: 0.5s;
+      cursor: pointer;
+      box-shadow: 10px 10px 66px -15px rgba(0,0,0,0.75);
+    }
+  }
+  .short-select{
+    width: 270px;
+  }
+  .long-select{
+    width: 432px;
+  }
+  select{
+    background: url('../images/dot.png') no-repeat right;
+    appearance:none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $theme_pink_2;
+    font-family: $font_montseratt;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 2;
+    text-align: left;
+    color: $theme_dark_blue;
+    &:focus{
+      outline:0;
+    }
+  }
+}
+#newsfeed{
+  padding-top: 12%;
+  padding-bottom: 4%;
+  .row{
+    text-align: center;
+    .img-link{
+      img{
+        &:hover{
+          filter: grayscale(65%);
+          box-shadow: 10px 10px 66px -15px rgba(0,0,0,0.75);
+          transition: 1s;
+        }
+      }
+    }
+    p{
+      font-family: $font_montseratt;
+      font-size: 20px;
+      line-height: 1.3;
+      color: #808a97;
+    }
+    .read-more{
+      max-height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .read-more .read-more-link{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 30px 0;
+	    background-image: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%);
+    }
+    .read-more-link{
+      font-family: $font_montseratt;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000000;
+      &:hover{
+        text-shadow: 3px 3px 5px rgba(150, 150, 150, 1);
+        transition: 0.5s;
+      }
+    }
+    .fst-links{
+      font-family: $font_montseratt;
+      font-size: 30px;
+      color: $theme_pink;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      &:hover{
+        color: darken($theme_pink, 15);
+        transition: 0.5s;
+        text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
+      }
+    }
+  }
+  h1{
+    font-family: $font_montseratt;
+    font-size: 49.3px;
+    font-weight: 600;
+    text-align: left;
+    color: $theme_pink;
+  }
+}
+
+footer{
+  background-color: $footer;
+  text-align: left;
+  padding: 80px;
+  ul{
+    list-style-type: none;
+      .list-header{
+        font-size: 16.5px;
+        font-weight: 600;
+      }
+      a{
+        font-family: $font_montseratt;
+        text-decoration: none;
+        font-size: 15.5px;
+        line-height: 43px;
+        color: #fff;
+      }
+    }
+  }
+
+@media (max-width: 1024px) {
+  footer{
+    text-align: center;
+    ul{
+      padding-inline-start: 0px !important;
+    }
+  }
+   .content-to-hide {
+      display: none !important;
+   }
+   .short-select{
+     width: 220px !important;
+     font-size: 20px !important;
+   }
+   .long-select{
+     width: 300px !important;
+     font-size: 20px !important;
+   }
+   #join-us{
+     h1{
+       font-size: 32px !important;
+     }
+     button{
+       font-size: 20px !important;
+       padding: 20px 70px 20px 70px !important;
+     }
+   }
+}
